@@ -1,0 +1,39 @@
+---
+version: 2
+plan:
+  project-key: PROJECT
+  key: PLAN
+  name: PLAN
+stages:
+  - Stage:
+      manual: false
+      final: false
+      jobs:
+        - JOB
+JOB:
+  key: JOB
+  tasks:
+    - script:
+        interpreter: SHELL
+        scripts:
+          - echo "OK"
+---
+version: 2
+deployment:
+  name: DEPLOYMENT
+  source-plan: PROJECT-PLAN
+release-naming:
+  next-version-name: release-1
+  applies-to-branches: false
+  auto-increment: true
+  auto-increment-variables: []
+environments:
+  - ENVIRONMENT
+ENVIRONMENT:
+  triggers: []
+  tasks:
+    - clean
+    - script:
+        interpreter: SHELL
+        scripts:
+          - echo "OK"
