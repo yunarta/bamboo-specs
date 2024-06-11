@@ -37,3 +37,16 @@ ENVIRONMENT:
         interpreter: SHELL
         scripts:
           - echo "OK"
+---
+version: 2
+deployment:
+  name: DEPLOYMENT
+deployment-permissions:
+  - roles:
+      - logged-in
+      - anonymous
+    permissions:
+      - view
+      - edit
+environment-permissions:
+  - ENVIRONMENT: []
