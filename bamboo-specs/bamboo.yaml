@@ -48,5 +48,10 @@ deployment-permissions:
     permissions:
       - view
       - edit
-environment-permissions:
-  - ENVIRONMENT: []
+default-environment-permissions:
+  - roles:
+      - logged-in
+      - anonymous
+    permissions:
+      - view
+      - edit
