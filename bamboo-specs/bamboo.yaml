@@ -44,14 +44,12 @@ deployment:
 deployment-permissions:
   - roles:
       - logged-in
-      - anonymous
     permissions:
       - view
       - edit
 default-environment-permissions:
   - roles:
       - logged-in
-      - anonymous
     permissions:
       - view
       - edit
